@@ -120,17 +120,17 @@ setup_info = {
 
     # basic information
 
-    'name': 'pyhwp',
+    'name': 'pyhwp-collabee',
     'version': get_version(),
     'description': 'hwp file format parser',
     'long_description': get_long_description(),
 
     # authorative
 
-    'author': 'mete0r',
-    'author_email': 'mete0r@sarangbang.or.kr',
+    'author': 'collabee',
+    'author_email': 'hoon@collab.ee',
     'license': 'GNU Affero General Public License v3 or later (AGPLv3+)',
-    'url': 'https://github.com/mete0r/pyhwp',
+    'url': 'https://github.com/collabee-repository/pyhwp',
 
     # classifying
 

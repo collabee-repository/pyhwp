@@ -46,3 +46,9 @@ coverage.xml
 deb_dist
 pep8.out
 pylint.out
+
+.project
+
+.pydevproject
+
+.settings/org.eclipse.core.resources.prefs
