@@ -4,7 +4,7 @@ source = hwp5
 
 [paths]
 source =
-	pyhwp/hwp5
+	src/hwp5
 	.tox/*/lib/python*/site-packages/hwp5
 	.tox/pypy*/site-packages/hwp5
 
