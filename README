@@ -1,45 +1,50 @@
-pyhwp
+pyhwp-collabee
 =====
 
-HWP Document Format v5 parser & processor.
+HWP Document Format v5 parser & processor. ( 기존 Pyhwp 수정 )
 
-Features
---------
-
-- Analyze and extract internal streams out from a HWP Document Format v5 file
-- (*Experimental*) Conversion to OpenDocument format (.odt) or plain text (.txt)
-
-Installation
+설치
 ------------
+기존 python 2버전과 3버전 둘다 지원되었으나, 수정으로 인해 
+아직은 **python3으로만 install 가능합니다.**
 
-from `pypi <http://pypi.org/project/pyhwp>`_::
+from `pypi <http://pypi.org/project/pyhwp-collabee>`_::
 
-   virtualenv pyhwp
-   pyhwp/bin/pip install --pre pyhwp  # Install pyhwp into a virtualenv directory
+	python -m pip install pyhwp-collabee  # Install pyhwp-collabee into user's home directory
 
-Or::
 
-   pip install --user --pre pyhwp  # Install pyhwp into user's home directory
-
-Requirements
+요구사항
 ------------
 
 - CPython 2.7, Jython 2.7 or PyPy >= 2.0.2
 - `lxml <https://pypi.org/project/lxml>`_ (optional)
 
-Documentation & Development
----------------------------
+PyPi 업데이트
+------------
+pip 배포( PyPi 업데이트 ) 사전 설치 (이하 파이썬은 3버전)
 
-- Documentation: `https://pyhwp.readthedocs.io <https://pyhwp.readthedocs.io>`_ [`한국/조선어 <https://pyhwp.readthedocs.io/ko/latest>`_]
-- Distribution: `http://pypi.python.org/pypi/pyhwp <http://pypi.python.org/pypi/pyhwp>`_
-- Development: `https://github.com/mete0r/pyhwp <https://github.com/mete0r/pyhwp>`_
-- Issue tracker: `https://github.com/mete0r/pyhwp/issues <https://github.com/mete0r/pyhwp/issues>`_
-- Feedbacks & contributions are welcome!
+	python -m pip install --user --upgrade setuptools wheel
+	python -m pip install --user --upgrade twine
 
-Contributors
+pip 배포( PyPi 업데이트 ) 방법
+
+1. VERSION.txt 파일 안에 버전을 수정해주어야 합니다. 겹치거나 이전 버전 사용시 업로드 불가합니다.
+2. 해당 프로젝트 디렉토리에서
+
+	`python setup.py sdist bdist_wheel`
+
+3. dist 디렉토리 내에 입력한 버전의 이름으로 whl 파일이 만들어져있을 것입니다.
+4. 해당 프로젝트 디렉토리에서
+	
+	`python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/[해당버전whl파일].whl`
+
+5. PyPi 계정 및 비밀번호 입력하면 배포 됩니다.
+
+
+원본 프로젝트
 ------------
 
-Maintainer: `mete0r <https://github.com/mete0r>`_
+Maintainer: `mete0r <https://github.com/mete0r>`
 
 License
 -------

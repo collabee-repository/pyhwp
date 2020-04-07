@@ -72,6 +72,6 @@ def decompress(stream):
     try:
         res=BytesIO(zlib.decompress(data, -15))  # without gzip header
     except:
-        res=BytesIO(data)
+        res=BytesIO(data)   # if decompress error occured, do not decompress
     
-    return res  # without gzip header
+    return res
